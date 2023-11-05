@@ -19,7 +19,7 @@ const Navbar = () => {
         </li>
         <li>
           {/* <a href="#">Reservations</a> */}
-          <Link to="#">Reservations</Link>
+          <Link to="/booking">Reservations</Link>
         </li>
         <li>
           {/* <a href="#">Order Online</a> */}
