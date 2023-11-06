@@ -1,7 +1,11 @@
 import React from "react";
 
 const ConfirmedBooking = () => {
-  return <div>ConfirmedBooking</div>;
+  return (
+    <main>
+      <p>Booking is confirmed</p>
+    </main>
+  );
 };
 
 export default ConfirmedBooking;

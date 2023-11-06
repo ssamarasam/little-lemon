@@ -1,8 +1,10 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import BookingForm from "../components/BookingForm";
 
 const BookingPage = () => {
+  const [bookings, setBookings] = useState([]);
   // since api is not getting loaded/run in browser
   const seededRandom = function (seed) {
     var m = 2 ** 35 - 31;
@@ -30,7 +32,16 @@ const BookingPage = () => {
   const submitAPI = function (formData) {
     return true;
   };
-
+  const navigate = useNavigate();
+  const submitForm = (formData) => {
+    const submit = submitAPI(formData);
+    if (submit) {
+      let allBookings = [...bookings, { id: bookings.length + 1, ...formData }];
+      console.log("bookings: ", allBookings);
+      setBookings(allBookings);
+      navigate("/confirmed");
+    }
+  };
   const updateTimes = (date) => {
     // return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
     const availableTimes = fetchAPI(new Date());
@@ -57,7 +68,11 @@ const BookingPage = () => {
   const [availableTimes, dispatch] = useReducer(reducer, initializeTimes());
   return (
     <>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+      <BookingForm
+        availableTimes={availableTimes}
+        dispatch={dispatch}
+        submitForm={submitForm}
+      />
     </>
   );
 };
