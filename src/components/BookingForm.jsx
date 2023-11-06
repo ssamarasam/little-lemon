@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 
-const BookingForm = ({ availableTimes }) => {
-  const [formData, setFormData] = useState([
-    {
-      date: "",
-      time: "",
-      numberOfGuests: 0,
-      occasion: "",
-    },
-  ]);
+const BookingForm = ({ availableTimes, dispatch }) => {
+  const [formData, setFormData] = useState({
+    date: "",
+    time: "",
+    numberOfGuests: 0,
+    occasion: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,9 +22,20 @@ const BookingForm = ({ availableTimes }) => {
       [name]: value,
     }));
   };
+
+  const handleDateChange = async (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+    dispatch({ type: "UPDATE_TIMES", payload: value });
+    console.log("after dispatch: ", formData.date);
+  };
   console.log("times: ", availableTimes);
   return (
     <main>
+      <h2 data-test-id="reserve">Book now</h2>
       <form
         style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
         onSubmit={handleSubmit}
@@ -37,7 +46,7 @@ const BookingForm = ({ availableTimes }) => {
           type="date"
           id="res-date"
           //   value={formData.date}
-          onChange={hanldeInputsChange}
+          onChange={handleDateChange}
           required
         />
         <label htmlFor="res-time">Choose time</label>
@@ -80,7 +89,11 @@ const BookingForm = ({ availableTimes }) => {
           <option value="Birthday">Birthday</option>
           <option value="Anniversary">Anniversary</option>
         </select>
-        <input type="submit" value="Make Your reservation" />
+        <input
+          type="submit"
+          value="Make Your reservation"
+          aria-label="submit button"
+        />
       </form>
     </main>
   );
