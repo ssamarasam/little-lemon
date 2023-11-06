@@ -34,6 +34,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     console.log("after dispatch: ", formData.date);
   };
   console.log("times: ", availableTimes);
+
   return (
     <main>
       <h2 data-test-id="reserve">Book now</h2>
