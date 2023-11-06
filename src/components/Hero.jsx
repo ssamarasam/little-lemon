@@ -3,7 +3,7 @@ import heroimg from "../assets/restauranfood.jpg";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <main className="hero">
       <div className="hero-content">
         <div className="hero-description">
           <p className="title">Little Lemon</p>
@@ -18,7 +18,7 @@ const Hero = () => {
           <img className="hero-img" src={heroimg} alt="image" />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

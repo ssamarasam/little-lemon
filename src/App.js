@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Main /> */}
       <Routes>
          <Route path="/" element={<HomePage />}></Route>
         <Route path="/booking" element={<BookingPage />}></Route>
