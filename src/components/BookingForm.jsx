@@ -92,6 +92,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
           <option value="Anniversary">Anniversary</option>
         </select>
         <input
+          className="submit-button"
           type="submit"
           value="Make Your reservation"
           aria-label="submit button"

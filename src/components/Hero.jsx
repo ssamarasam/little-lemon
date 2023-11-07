@@ -12,10 +12,10 @@ const Hero = () => {
             We are a family owned mediteranian restaurant focused on traditional
             receipe served with a modern twist
           </p>
-          <button>Reserve a table</button>
+          <button className="reserve-button btn">Reserve a table</button>
         </div>
         <div className="hero-image-container">
-          <img className="hero-img" src={heroimg} alt="image" />
+          <img className="hero-image" src={heroimg} alt="image" />
         </div>
       </div>
     </main>

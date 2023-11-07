@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import Menu from "./Menu";
 import Testimonials from "./Testimonials";
+import RestaurantDescription from "./RestaurantDescription";
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Hero />
       <Menu />
       <Testimonials />
+      <RestaurantDescription />
     </main>
   );
 };
