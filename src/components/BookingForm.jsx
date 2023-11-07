@@ -37,7 +37,9 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
 
   return (
     <main>
-      <h2 data-test-id="reserve">Book now</h2>
+      <h2 data-test-id="reserve" className="book-now">
+        Book now
+      </h2>
       <form
         style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
         onSubmit={handleSubmit}

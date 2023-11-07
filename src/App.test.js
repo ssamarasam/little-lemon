@@ -32,3 +32,22 @@ test("intialize or updatetimes", () => {
   );
   expect(screen.getByRole("option", { name: testTime }).selected).toBe(true);
 });
+
+const availableTimes = ["17:00", "17:30"];
+const today = new Date().toISOString().split("T")[0];
+
+test("Submit the form", () => {
+  render(
+    <BookingForm submitForm={submitForm} availableTimes={availableTimes} />
+  );
+
+  const submitButtom = screen.getByRole("button");
+  fireEvent.click(submitButtom);
+
+  expect(submitForm).toHaveBeenCalled({
+    date: today,
+    guests: 1,
+    ocassion: "birthday",
+    time: availableTimes[0],
+  });
+});

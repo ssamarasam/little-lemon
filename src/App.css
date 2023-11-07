@@ -313,16 +313,6 @@ label {
   bottom: 0.6em;
 }
 
-.testimonials-title {
-  font-family: "Markazi Text", serif;
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 43px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #333333;
-}
-
 .desc-title {
   color: #000000;
 }
@@ -549,7 +539,28 @@ select {
   line-height: 43px;
   letter-spacing: 0em;
   text-align: center;
-  color: #333333;
+  color: white;
+}
+
+.book-now {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #495e57;
+  font-family: "Markazi", sans-serif;
+  color: white;
+}
+
+.booking-confirmation {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Markazi", sans-serif;
+  color: #495e57;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn,
@@ -746,6 +757,7 @@ footer {
 
 .testimonials-parent {
   background-color: #edefee;
+  background-color: #495e57;
 }
 
 .testimonial {
