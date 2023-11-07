@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "../assets/Logo.svg";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
-      <a href="#">
+      <Link to="/">
         <img src={logo} alt="little lemon logo" />
-      </a>
+      </Link>
       <Navbar />
     </header>
   );

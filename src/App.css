@@ -384,8 +384,7 @@ main {
 }
 
 form {
-  background-color: #faecdc;
-  width: 65%;
+  width: 100%;
   margin-inline: auto;
   text-align: center;
   padding: 2em 1em;
