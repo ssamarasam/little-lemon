@@ -8,7 +8,7 @@ const Testimonials = () => {
     <main className="testinmonials-container testimonials-parent">
       <p className="testimonials-title">Testimonials</p>
       <div className="testimonials">
-        <div className="testimonial">
+        <article className="testimonial">
           <img className="reviewer-img" src={personOne} alt="reviewer person" />
           <div className="testimonial-content">
             <div className="name-rating">
@@ -19,8 +19,8 @@ const Testimonials = () => {
               <p>Food is nice. Happy to visit.</p>
             </div>
           </div>
-        </div>
-        <div className="testimonial">
+        </article>
+        <article className="testimonial">
           <img className="reviewer-img" src={personTwo} alt="reviewer person" />
           <div className="testimonial-content">
             <div className="name-rating">
@@ -31,8 +31,8 @@ const Testimonials = () => {
               <p>Verny nice environment. Easy to book a table.</p>
             </div>
           </div>
-        </div>
-        <div className="testimonial">
+        </article>
+        <article className="testimonial">
           <img
             className="reviewer-img"
             src={personThree}
@@ -50,7 +50,7 @@ const Testimonials = () => {
               </p>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </main>
   );

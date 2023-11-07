@@ -38,7 +38,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   return (
     <main>
       <h2 data-test-id="reserve" className="book-now">
-        Book now
+        Book Now
       </h2>
       <form
         style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
